@@ -10,7 +10,7 @@ async function getKey(path) {
     let key = ""
 
     for (let index = 2; index < arrayPath.length - 1; index++){
-      key += `${arrayPath[index - 1]}/`
+      key += `${arrayPath[index]}/`
     }
 
     key += 'terraform.tfstate'

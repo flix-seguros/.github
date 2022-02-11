@@ -22,6 +22,9 @@ def main(aws_profile, root_path):
     HML_TF_AWS_KEY_ID = os.environ["HML_TF_AWS_KEY_ID"]
     HML_TF_AWS_SECRET_KEY = os.environ["HML_TF_AWS_SECRET_KEY"]    
 
+    SANDBOX_TF_AWS_KEY_ID = os.environ["SANDBOX_TF_AWS_KEY_ID"]
+    SANDBOX_TF_AWS_SECRET_KEY = os.environ["SANDBOX_TF_AWS_SECRET_KEY"]    
+
     fileAws = open(f"{root_path}.aws/credentials","w")
 
     fileAws.write("[org]\n")
@@ -37,6 +40,10 @@ def main(aws_profile, root_path):
     fileAws.write("[prd]\n")
     fileAws.write(f"aws_access_key_id={ PRD_TF_AWS_KEY_ID }\n")
     fileAws.write(f"aws_secret_access_key={ PRD_TF_AWS_SECRET_KEY }\n\n")
+
+    fileAws.write("[sandbox]\n")
+    fileAws.write(f"aws_access_key_id={ SANDBOX_TF_AWS_KEY_ID }\n")
+    fileAws.write(f"aws_secret_access_key={ SANDBOX_TF_AWS_SECRET_KEY }\n\n")
 
     fileAws.close()    
 

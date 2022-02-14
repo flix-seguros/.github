@@ -54,7 +54,7 @@ def main(aws_profile, root_path):
         fileAws.write(f"aws_access_key_id={ SANDBOX_TF_AWS_KEY_ID }\n")
         fileAws.write(f"aws_secret_access_key={ SANDBOX_TF_AWS_SECRET_KEY }\n\n")
 
-    fileAws.close()    
+    fileAws.close()
 
     os.environ["AWS_PROFILE"] = aws_profile.lower()
 
